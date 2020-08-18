@@ -23,6 +23,7 @@ Whitehole is fully developed in Windows.
 
 ## How do I det it?
 <br />
+
 Whitehole can be installed from PyPI using pip:
 ```
 pip install whitehole

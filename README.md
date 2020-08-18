@@ -30,6 +30,7 @@ pip install whitehole
 ```
 
 
-## Use cases
+## Quick Start
 <br />
+
 To have a better understanding of the features, please check the notebooks on the 'notebook' folder

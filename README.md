@@ -1,6 +1,6 @@
 # WHITEHOLE: 
 <br />
-Whitehole is a zarr-format-base-tool that allows individuals or small teams interested in processing financial information to make investment decisions.
+Whitehole is a zarr-format-based-tool that allows individuals or small teams interested in processing financial information to make investment decisions.
 
 
 ## What do I need to start?
@@ -21,7 +21,7 @@ Whitehole is fully developed in Windows.
 * Decryptor: because of zarr store data in binary, with this class is possible to transform it in a more human-comprenhensive way.
 * Whitehole is thought to have different features, the processing of the information will be realized in future versions.
 
-## How do I det it?
+## How do I get it?
 <br />
 
 Whitehole can be installed from PyPI using pip:

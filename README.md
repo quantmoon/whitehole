@@ -17,9 +17,9 @@ Whitehole is fully developed in Windows.
 
 ## Features:
 <br />
-* Decryptor: because of zarr store data in binary, with this class is possible to transform it in a more human-comprenhensive way.
-* Whitehole is thought to have different features, the processing of the information will be realised in future versions.
 
+* Decryptor: because of zarr store data in binary, with this class is possible to transform it in a more human-comprenhensive way.
+* Whitehole is thought to have different features, the processing of the information will be realized in future versions.
 
 ## How do I det it?
 <br />

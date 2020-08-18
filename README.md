@@ -5,6 +5,7 @@ Whitehole is a zarr-format-base-tool that allows individuals or small teams inte
 
 ## What do I need to start?
 <br />
+
 As Whitehole was thought in a way of lowering some enter barriers to the finacial world, the first step to think about is the huge amount of data that is necessary to process for some purposes, specially if is required to use some features as **ticks** instead of **candlebars**. That's why we need a format to store all the data in less storage space. To accomplish that, Whitehole use the [zarr format](https://github.com/zarr-developers/zarr-python) to store the data in binary with metadata understand it. 
 
 Also is necesarry a parallel procesing of this format to focus not only solve the problem of storage, but also improve the performance of the process. That's why we need to use the [xarray](https://github.com/pydata/xarray)

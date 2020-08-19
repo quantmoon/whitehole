@@ -1,4 +1,6 @@
 # WHITEHOLE: 
+![alt text](http://url/to/img.png)
+
 <br />
 Whitehole is a zarr-format-based-tool that allows individuals or small teams interested in processing financial information to make investment decisions.
 

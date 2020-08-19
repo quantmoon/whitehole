@@ -1,5 +1,4 @@
 ![logo_website](https://user-images.githubusercontent.com/49825286/90585259-06971800-e19a-11ea-88e2-c4866aa8caaf.png)
-# WHITEHOLE: 
 <br />
 Whitehole is a zarr-format-based-tool that allows individuals or small teams interested in processing financial information to make investment decisions.
 

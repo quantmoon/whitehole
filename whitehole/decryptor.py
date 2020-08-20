@@ -2,16 +2,17 @@
 """
 Created on Sat Aug 15 14:48:14 2020
 
-@author: HELI
+@author: QUANTMOON
 """
-import csv
-from datetime import datetime
-import pandas as pd
-import numpy as np
-from dateutil import parser
+
 import sys
-import re
+import numpy as np
 import xarray as xr
+import pandas as pd
+from dateutil import parser
+from datetime import datetime
+import pandas_market_calendars as mcal
+
 
 class BaseDecryptor(object):
     """
@@ -30,19 +31,13 @@ class BaseDecryptor(object):
         """
         Gets trading days based on NYSE Calendar.
         """
-        #extend limits of csv extension
-        csv.field_size_limit(10**9)
+        nyse = mcal.get_calendar('NYSE')
+        early = nyse.schedule(start_date='2015-01-01', end_date='2021-04-28')
+        dts = list(early.index.date)
         
-        #open trading calendar file
-        with open("./trading_calendar_NYSE.csv") as td:
-            reader = csv.reader(td)
-            dates_string = list(reader)[0][0]
-            dates_list = re.split(r";",dates_string)
-            
         #transform as datetime.date() each string date
-        return [datetime.strptime(
-            j.split("T")[0],'%Y-%m-%d').date() 
-                for j in dates_list]
+        return dts
+
 
     def extract_date_available_market(self, 
                                       start_, 
@@ -159,8 +154,7 @@ class BaseDecryptor(object):
         if data.timestamp.shape[0] == 0:
             print('No stored data for this stock/heartbeat')
             sys.exit()
-            
-        print(data.timestamp.where(data.timestamp >0).dropna(dim='coords').values[-100:])
+        
         #segmentation based on time init and time last
         data = data.where(
             data.timestamp>=initialization_step, 
@@ -237,6 +231,10 @@ class Decryptor(BaseDecryptor):
         if self.full_day:
             self.start_time = '9:30'
             self.end_time = '16:00'
+        #check if you set start and end time
+        elif self.start_time is None and self.end_time is None:
+            print("Define 'full_day=True' or set 'start' & 'end' time value")
+            sys.exit()
         
         #check if single 'date' is requested
         if self.date is not None:

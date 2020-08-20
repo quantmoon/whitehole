@@ -32,4 +32,4 @@ pip install whitehole
 ## Quick Start
 <br />
 
-To have a better understanding of the features, please check the notebooks on the 'notebook' folder
+To have a better understanding of the features, please check the notebooks on the [notebook](https://github.com/quantmoon/whitehole/tree/master/whitehole/notebooks) folder

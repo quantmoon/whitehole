@@ -1,4 +1,4 @@
-# Contributing to Numpy
+# Contributing to Whitehole
 <br />
 
 In Quantmoon Technologies, as a way to fill the gap between the financial industry and individuals initiatives, we want to share some tools that we believe could be useful for quantitative research for investments. For this purpose, we will be releasing new versions of the Whitehole package with new features added.
